@@ -15,7 +15,7 @@ struct stu
 int main()
 {
 	struct stu* pTemp = NULL;
-	//pTemp用作顺序打印和倒序打印链表时用到的临时指针，masterSub
+	//pTemp用作顺序打印和倒序打印链表时用到的临时指针，masterSub修改
 	struct stu* pHead = NULL;
 	//定义pHead用来指向队首结点
 	struct stu* pEnd = NULL;
