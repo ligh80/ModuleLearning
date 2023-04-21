@@ -19,7 +19,7 @@ git clone https://github.com/ligh80/makefiletest.git    //如果本地是空仓�
 git remote add origin “git@github.com:ligh80/makefiletest.git”    //origin 远程版本库的代称，一般默认是origin， 可以改
 git remote -v   //查看远程库信息，一个远程库对应两条信息，（fatch）信息和（push）信息
 git fetch --all   //根据已连接的远程仓库，将远程主机的最新内容拉到本地
-git reset --hard origin/master   //强制更新覆盖本地
+git reset --hard origin/master   //强制更新覆盖本地，在本地未修改文件的情况下常用
 
 git pull origin master  //相当于git fetch 和 git merge，并不会把所有文件更新（本地已经修改的文件不会更新），只会更新服务器上修改过的其他文件
 
@@ -29,6 +29,7 @@ git remote add origin “git@github.com:ligh80/makefiletest.git”    //origin �
 git remote -v   //查看远程库信息，一个远程库对应两条信息，（fatch）信息和（push）信息
 
 git add .   //添加当前目录下的所有文件到暂存区，可以是添加一个或多个文件到暂存区:git add [file1] [file2] ...
+git rm ./obj/c1.o   //删除本地文件，同时也删除暂存区该文件
 git status  //命令用于查看项目的当前状态
 git commit -m '提交日志'    //进行提交，提交的时候应该注明提交日志, 描述改动的详细内容，现在临时区域里的文件合并到了本地仓库，可以不要-m参数
 git push    //把本地仓库提交到远端
