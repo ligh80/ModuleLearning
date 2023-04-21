@@ -38,6 +38,10 @@ git reset HEAD  //撤删add的所有文件
 git reset HEAD src/mode/hello.java  //对某一个文件进行撤删
 
 回滚代码
+情况一  从暂存区回滚
+git checkout gitguide.txt   //从暂存区回复该文件
+
+情况二 从版本库回滚
 如果需要删除的 commit 是最新的，那么可以通过 git reset 命令将代码回滚到之前某次提交的状态，但一定要将现有的代码做好备份，否则回滚之后这些变动都会消失。具体操作如下：
 git log // 查询要回滚的 commit_id
 git reset --hard [commit_id] // HEAD 就会指向此次的提交记录
