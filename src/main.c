@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include "./c1.h"
 #include "./c2.h"
@@ -35,7 +36,7 @@ int main()
 	
 	while (scanf("%d", &stu_new->iScore)&&stu_new->iScore != -1)
 	{
-		scanf("%s", &stu_new->cName);
+		scanf("%s", stu_new->cName);
 		stu_end = stu_new;
 		stu_new = (struct stu*)malloc(sizeof(struct stu));
 		stu_end->pNext= stu_new;
