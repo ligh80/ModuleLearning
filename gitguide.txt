@@ -39,4 +39,10 @@ git reset HEAD src/mode/hello.java  //对某一个文件进行撤删
 回滚代码
 如果需要删除的 commit 是最新的，那么可以通过 git reset 命令将代码回滚到之前某次提交的状态，但一定要将现有的代码做好备份，否则回滚之后这些变动都会消失。具体操作如下：
 git log // 查询要回滚的 commit_id
-git reset --hard [commit_id] // HEAD 就会指向此次的提交记录 
+git reset --hard [commit_id] // HEAD 就会指向此次的提交记录
+
+分支管理
+git fetch   //将远程仓库更新至本地，保证本地存储的远程仓库是最新状态
+git branch -a   //查看所有分支列表（包括本地和远程，remotes/开头的表示远程分支）；列出本地已经存在的分支，并且当前分支会用*标记
+git checkout 分支名称   //切换本地分支
+git pull origin 远程分支名称:本地分支名称     //从远程仓库pull（拉取）代码到本地分支；origin是远程仓库连接默认的对象名称,[远程分支名称],[本地分支名称]如果不填，默认都填写本地分支
