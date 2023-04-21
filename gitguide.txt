@@ -1,5 +1,5 @@
 apt install git     //安装git
-
+---------------------------------------------------------------------------
 ssh-keygen -t rsa -C “xxxxxxxxxx@163.com”   //因为git和 GitHub之间是通过ssh加密传输的，因此需要配置公钥，需要先生成公私密钥。
 cat /root/.ssh/id_rsa.pub //复制生产的密钥到github仓库SSH的key库中
 ssh -T git@github.com   //查看能否通信成功
@@ -7,9 +7,9 @@ ssh -T git@github.com   //查看能否通信成功
 git config --global user.name "<用户名>"    //设置用户名
 git config --global user.email "<电子邮件>" //设置电子邮箱
 git config --list   //查看是否设置成功
-
+---------------------------------------------------------------------------
 git init    //本地本地仓库
-
+---------------------------------------------------------------------------
 从远程仓库同步仓库到本地
 情况一 拉取没有权限仓库的代码项目，只用clone,走的是https方式
 git clone https://github.com/ligh80/makefiletest.git //例如这样，后面是这个仓库的http的链接
@@ -23,7 +23,7 @@ git reset --hard origin/master   //强制更新覆盖本地，在本地未修改
 
 git pull origin master  //相当于git fetch 和 git merge，并不会把所有文件更新（本地已经修改的文件不会更新），只会更新服务器上修改过的其他文件
 
-
+---------------------------------------------------------------------------
 从本地仓库同步到远程仓库
 git remote add origin “git@github.com:ligh80/makefiletest.git”    //origin 远程版本库的代称，一般默认是origin， 可以改
 git remote -v   //查看远程库信息，一个远程库对应两条信息，（fatch）信息和（push）信息
@@ -36,7 +36,7 @@ git push    //把本地仓库提交到远端
 
 git reset HEAD  //撤删add的所有文件
 git reset HEAD src/mode/hello.java  //对某一个文件进行撤删
-
+---------------------------------------------------------------------------
 回滚代码
 情况一  从暂存区回滚
 git checkout gitguide.txt   //从暂存区回复该文件
@@ -45,7 +45,7 @@ git checkout gitguide.txt   //从暂存区回复该文件
 如果需要删除的 commit 是最新的，那么可以通过 git reset 命令将代码回滚到之前某次提交的状态，但一定要将现有的代码做好备份，否则回滚之后这些变动都会消失。具体操作如下：
 git log // 查询要回滚的 commit_id
 git reset --hard [commit_id] // HEAD 就会指向此次的提交记录
-
+---------------------------------------------------------------------------
 分支管理
 git fetch   //将远程仓库更新至本地，保证本地存储的远程仓库是最新状态
 git branch -a   //查看所有分支列表（包括本地和远程，remotes/开头的表示远程分支）；列出本地已经存在的分支，并且当前分支会用*标记
