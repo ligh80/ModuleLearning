@@ -1,7 +1,7 @@
 apt install git     //安装git
 ---------------------------------------------------------------------------
-ssh-keygen -t rsa -C “xxxxxxxxxx@163.com”   //因为git和 GitHub之间是通过ssh加密传输的，因此需要配置公钥，需要先生成公私密钥。
-cat /root/.ssh/id_rsa.pub //复制生产的密钥到github仓库SSH的key库中
+ssh-keygen -t ed25519 -C “xxxxxxxxxx@163.com”   //因为git和 GitHub之间是通过ssh加密传输的，因此需要配置公钥，需要先生成公私密钥。
+cat /root/.ssh/id_ed25519.pub //复制生产的密钥到github仓库SSH的key库中，注意ssh-keygen指令存放.pub的地址
 ssh -T git@github.com   //查看能否通信成功
 
 git config --global user.name "<用户名>"    //设置用户名
