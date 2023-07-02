@@ -31,7 +31,12 @@ git clone https://github.com/ligh80/makefiletest.git    //如果本地是空仓�
 git remote add origin “git@github.com:ligh80/makefiletest.git”    //origin 远程版本库的代称，一般默认是origin， 可以改
 git remote -v   //查看远程库信息，一个远程库对应两条信息，（fatch）信息和（push）信息
 git fetch --all   //根据已连接的远程仓库，将远程主机的最新内容拉到本地
-git reset --hard origin/master   //强制更新覆盖本地，在不考虑本地代码修改的情况下使用
+
+合并操作步骤（原来本地有文件）：
+git add . //将所有文件信息增加到暂存区，保存着本地的commit状态
+git reset --hard origin/master   //强制将远程服务器分支更新覆盖至HEAD，此时HEAD是存储着当前working directory所处服务器最新的commit（在不考虑本地代码修改的情况下使用）
+git add/rm <文件>...    //更新要提交的内容,对象是本地commit状态
+git checkout -- <文件>...  //丢弃工作区的改动，对象是本地工作区文件
 
 git pull [远程服务器] [远程分支名]:[本地分支名]  //相当于git fetch 和 git merge，并不会把所有文件更新（本地已经修改的文件不会更新），只会更新服务器上修改过的其他文件
 
