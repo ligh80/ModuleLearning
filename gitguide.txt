@@ -24,7 +24,8 @@ git pull origin 远程分支名称:本地分支名称     //从远程仓库pull�
 ---------------------------------------------------------------------------
 从远程仓库同步仓库到本地
 情况一 拉取没有权限仓库的代码项目，只用clone,走的是https方式
-git clone https://github.com/ligh80/makefiletest.git //例如这样，后面是这个仓库的http的链接
+git clone https://github.com/ligh80/makefiletest.git //       例如这样，后面是这个仓库的http的链接，当从网上克隆一个仓库时，有两种URL可以选择，一种是HTTPS URLs（任何场景下都可以工作，推荐方式），另一种是SSH URLs。通常我们选择的是使用HTTPS URL来clone仓库
+                                                              当使用HTTPS方式克隆仓库时，对仓库的一些更改操作，比如说git push，需要用户输入username and password。这是因为Github采取了two-factor authentication,双重验证方式来保证安全。（每次验证的时候，需要输入用户名和密码），或者如果要                                                               授权某个组织，给第三方软件，来访问Github，则需要提供personal access token。
 
 情况二 拉取有修改权限仓库的代码项目，可以用pull(fetch+merge)和push
 git clone https://github.com/ligh80/makefiletest.git    //如果本地是空仓库，推荐用clone，将github的仓库直接拉下来，之后再用pull和push
