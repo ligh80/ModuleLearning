@@ -70,4 +70,6 @@ git diff <branch 1> < branch 2>  //branch 1（变动前） 与 branch 2（变动
 查看分支的commit记录
 git log <branch>  //打印每次的commit记录
 --------------------------------------------------------------------------------
-
+删除分支
+git push origin --delete main  //删除远程分支
+git branch -D main    //删除本地分支
