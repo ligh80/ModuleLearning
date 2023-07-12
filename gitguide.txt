@@ -28,7 +28,7 @@ git clone https://github.com/ligh80/makefiletest.git //       例如这样，后
                                                               当使用HTTPS方式克隆仓库时，对仓库的一些更改操作，比如说git push，需要用户输入username and password。这是因为Github采取了two-factor authentication,双重验证方式来保证安全。（每次验证的时候，需要输入用户名和密码），或者如果要                                                               授权某个组织，给第三方软件，来访问Github，则需要提供personal access token。
 
 情况二 拉取有修改权限仓库的代码项目，可以用pull(fetch+merge)和push
-git clone https://github.com/ligh80/makefiletest.git    //如果本地是空仓库，推荐用clone，将github的仓库直接拉下来，之后再用pull和push
+git clone git@github.com:ligh80/linux_imx6ull.git    //如果本地是空仓库，推荐用clone，将github的仓库直接拉下来，之后再用pull和push,注意！这里是自己的仓库 那么走SSH，以后push不用密码验证
 git remote add origin “git@github.com:ligh80/makefiletest.git”    //origin 远程版本库的代称，一般默认是origin， 可以改
 git remote -v   //查看远程库信息，一个远程库对应两条信息，（fatch）信息和（push）信息
 git fetch --all   //根据已连接的远程仓库，将远程主机的最新内容拉到本地
