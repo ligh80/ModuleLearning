@@ -7,6 +7,7 @@ ssh -T git@github.com   //查看能否通信成功
 git config --global user.name "<用户名>"    //设置用户名
 git config --global user.email "<电子邮件>" //设置电子邮箱
 git config --list   //查看是否设置成功
+git config --global --unset <user.name>  //删除配置
 ---------------------------------------------------------------------------
 git init    //本地本地仓库
 ---------------------------------------------------------------------------
